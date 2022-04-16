@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Landing Page">
     <div class="container px-6 py-16 mx-auto">
         <div class="items-center lg:flex">
             <div class="w-full lg:w-1/2">
