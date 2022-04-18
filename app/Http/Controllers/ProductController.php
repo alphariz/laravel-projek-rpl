@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller
 {
@@ -26,7 +27,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Validator::make($request->all(),[
+            'name' => ['required'],
+            'stock' => ['required','numeric'],
+            'price' => ['required','numeric'],
+            'image' => ['required','mimes:png,jpg,jpeg'],
+            'description' => ['required']
+        ]);
+
+        $file_name = $request->image->getClientOriginalName();
+        $image = $request->image->storeAs('img',$file_name);
+
+        Product::create([
+            "name" => $request->name,
+            "stock" => $request->stock,
+            "price" => $request->price,
+            "image_path" => $image,
+            "description" => $request->description,
+        ]);
+        return redirect()->route('product.index');
     }
 
     /**
