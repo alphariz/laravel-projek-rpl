@@ -17,13 +17,17 @@
                 </div>
 
                 {{-- <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR"> --}}
-                <img class="object-cover w-full h-48 mt-2" src="{{ $productData->image_path }}" alt="{{ $productData->name }}">
+                <img class="object-cover w-full h-48 mt-2" src="{{ asset('storage/'.$productData->image_path) }}" alt="{{ $productData->name }}">
 
                 <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
                     <h1 class="text-lg font-bold text-white">{{ $productData->price }} IDR</h1>
                     <div class="inline-flex">
                         <a href="/product/edit" class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white border border-gray-800 rounded-l hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Edit</a>
-                        <button class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white border-t border-b border-r border-gray-800 rounded-r hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Delete</button>
+                        <form action="{{ route('product.destroy',['product'=>$productData->id]) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white border-t border-b border-r border-gray-800 rounded-r hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Delete</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-<footer class="relative bottom-0 w-full bg-white dark:bg-gray-800">
     <div class="container px-6 py-8 mx-auto">
 
         <hr class="my-10 border-gray-200 dark:border-gray-700" />
@@ -11,4 +10,3 @@
             </div>
         </div>
     </div>
-</footer>

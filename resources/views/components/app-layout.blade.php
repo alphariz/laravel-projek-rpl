@@ -7,14 +7,18 @@
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body>
+<body class="flex flex-col min-h-screen ">
     <header class="bg-white dark:bg-gray-800">
         <x-navbar></x-navbar>
     </header>
 
-    {{ $slot }}
+    <main class="flex-grow">
+        {{ $slot }}
+    </main>
 
-    <x-footer></x-footer>
+    <footer class="relative bottom-0 w-full bg-white dark:bg-gray-800">
+        <x-footer></x-footer>
+    </footer>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
