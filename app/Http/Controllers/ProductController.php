@@ -32,7 +32,7 @@ class ProductController extends Controller
             'stock' => ['required','numeric'],
             'price' => ['required','numeric'],
             'image' => ['required','mimes:png,jpg,jpeg'],
-            'description' => ['required']
+            // 'description' => ['required']
         ]);
 
         $file_name = $request->image->getClientOriginalName();
@@ -56,7 +56,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product =  Product::findOrFail($id);
+        return view('post.edit_product',compact('product'));
     }
 
     /**

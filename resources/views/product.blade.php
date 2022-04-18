@@ -22,7 +22,10 @@
                 <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
                     <h1 class="text-lg font-bold text-white">{{ $productData->price }} IDR</h1>
                     <div class="inline-flex">
-                        <a href="/product/edit" class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white border border-gray-800 rounded-l hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Edit</a>
+                        <form action="{{ route('product.show',['product'=>$productData->id]) }}" method="get">
+                            @csrf
+                            <button type="submit" class="px-2 py-1 text-xs font-semibold text-gray-900 uppercase transition-colors duration-200 transform bg-white border border-gray-800 rounded-l hover:bg-gray-200 focus:bg-gray-400 focus:outline-none">Edit</button>
+                        </form>
                         <form action="{{ route('product.destroy',['product'=>$productData->id]) }}" method="post">
                             @csrf
                             @method('delete')

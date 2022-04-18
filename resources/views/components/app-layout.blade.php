@@ -16,7 +16,7 @@
         {{ $slot }}
     </main>
 
-    <footer class="relative bottom-0 w-full bg-white dark:bg-gray-800">
+    <footer class="w-full bg-white dark:bg-gray-800">
         <x-footer></x-footer>
     </footer>
     <script src="{{ asset('js/app.js') }}"></script>
