@@ -1,6 +1,6 @@
     <div class="container px-6 py-8 mx-auto">
 
-        <hr class="my-10 border-gray-200 dark:border-gray-700" />
+        <hr class="mt-2 mb-4 border-gray-200 dark:border-gray-700" />
 
         <div class="flex flex-col items-center sm:flex-row sm:justify-between">
             <p class="text-sm text-gray-400">© Copyright 2022. Hak Cipta.</p>
