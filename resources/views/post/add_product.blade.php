@@ -2,7 +2,7 @@
     <div class="max-w-3xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <h1 class="text-xl font-medium text-gray-900 dark:text-gray-300">Add Product</h1>
         <hr class="w-full mt-4 mb-4 bg-slate-900">
-        <form action="{{ route('product.store') }}" id="form-add-product" method="POST" enctype="multipart/form-data" onsubmit="return submitForm(this);">
+        <form action="{{ route('product.store') }}" id="form-add-product" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-6">
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Name</label>
