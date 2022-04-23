@@ -2,7 +2,7 @@
     <div class="max-w-3xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <h1 class="text-xl font-medium text-gray-900 dark:text-gray-300">Add Product</h1>
         <hr class="w-full mt-4 mb-4 bg-slate-900">
-        <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('product.store') }}" id="form-add-product" method="POST" enctype="multipart/form-data" onsubmit="return submitForm(this);">
             @csrf
             <div class="mb-6">
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Product Name</label>
@@ -26,7 +26,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <a href="{{ route('product.index') }}" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Back</a>
-                <button type="submit" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Add New Product</button>
+                <button type="submit" id="add-button" class="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">Add New Product</button>
             </div>
         </form>
     </div>
