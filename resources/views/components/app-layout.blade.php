@@ -20,6 +20,6 @@
         <x-footer></x-footer>
     </footer>
     <script src="{{ asset('js/app.js') }}"></script>
-    <script>{{ $script }}</script>
+    {{ $script }}
 </body>
 </html>

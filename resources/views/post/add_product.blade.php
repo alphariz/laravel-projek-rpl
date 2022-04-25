@@ -33,5 +33,21 @@
     </div>
     @endslot
     @slot('script')
+    <script>
+        document
+            .getElementById("form-add-product")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                swal({
+                    title: "Success!"
+                    , text: "New product added successfully!"
+                    , icon: "success"
+                    , type: "success"
+                , }).then(function() {
+                    document.getElementById("form-add-product").submit();
+                });
+            });
+
+    </script>
     @endslot
 </x-app-layout>

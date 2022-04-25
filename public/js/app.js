@@ -2169,17 +2169,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
-document.getElementById("form-add-product").addEventListener("submit", function (event) {
-  event.preventDefault();
-  sweetalert__WEBPACK_IMPORTED_MODULE_0___default()({
-    title: "Success!",
-    text: "New product added successfully!",
-    icon: "success",
-    type: "success"
-  }).then(function () {
-    document.getElementById("form-add-product").submit();
-  });
-});
 
 /***/ }),
 
