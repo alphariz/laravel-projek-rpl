@@ -1,4 +1,5 @@
 <x-app-layout title="Landing Page">
+    @slot('main')
     <div class="container px-6 py-16 mx-auto">
         <div class="items-center lg:flex">
             <div class="w-full lg:w-1/2">
@@ -14,4 +15,7 @@
             </div>
         </div>
     </div>
+    @endslot
+    @slot('script')
+    @endslot
 </x-app-layout>

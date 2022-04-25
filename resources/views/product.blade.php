@@ -1,4 +1,5 @@
 <x-app-layout title="Product">
+    @slot('main')
     <div class="px-8 py-4 mx-auto bg-white rounded-lg shadow-md max-w-7xl dark:bg-gray-800">
         <div class="flex items-center justify-between">
             <span class="text-lg font-light text-gray-600 dark:text-gray-400">Product List</span>
@@ -51,4 +52,7 @@
             @endforeach
         </div>
     </div>
+    @endslot
+    @slot('script')
+    @endslot
 </x-app-layout>

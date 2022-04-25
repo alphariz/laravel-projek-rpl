@@ -13,12 +13,13 @@
     </header>
 
     <main class="flex-grow">
-        {{ $slot }}
+        {{ $main }}
     </main>
 
     <footer class="w-full bg-white dark:bg-gray-800">
         <x-footer></x-footer>
     </footer>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>{{ $script }}</script>
 </body>
 </html>
