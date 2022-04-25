@@ -3,7 +3,7 @@
     <div class="max-w-3xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <h1 class="text-xl font-medium text-gray-900 dark:text-gray-300">Edit Product</h1>
         <hr class="w-full mt-4 mb-4 bg-slate-900">
-        <form action="{{ route('product.update',['product'=>$product->id]) }}" method="POST">
+        <form action="{{ route('product.update',['product'=>$product->id]) }}" id="form-edit-product" method="POST">
             @method('put')
             @csrf
             <div class="flex divide-x-2">
@@ -39,5 +39,21 @@
     </div>
     @endslot
     @slot('script')
+    <script>
+        document
+            .getElementById("form-edit-product")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                swal({
+                    title: "Success!"
+                    , text: "Product edited successfully!"
+                    , icon: "success"
+                    , type: "success"
+                , }).then(function() {
+                    document.getElementById("form-edit-product").submit();
+                });
+            });
+
+    </script>
     @endslot
 </x-app-layout>
