@@ -12,7 +12,7 @@
         <x-navbar></x-navbar>
     </header>
 
-    <main class="flex-grow">
+    <main class="flex-grow mt-4">
         {{ $main }}
     </main>
 
