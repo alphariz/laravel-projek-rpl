@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Blank Page</title>
+    <title>Admin Panel</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -77,28 +77,42 @@
             <!-- Main content -->
             <section class="content">
 
-                <!-- Default box -->
+                <!-- Table box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Title</h3>
-
                         <div class="card-tools">
-                            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                <i class="fas fa-minus"></i>
-                            </button>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                <i class="fas fa-times"></i>
-                            </button>
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <a href="/product/add">
+                                    <button type="button" class="btn btn-success btn-block"><i class="fa fa-plus"></i> Add Product</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        Start creating your amazing application!
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Product Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-1">183</td>
+                                    <td class="col-9">John Doe</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <!-- /.card-body -->
-                    <div class="card-footer">
-                        Footer
-                    </div>
-                    <!-- /.card-footer-->
                 </div>
                 <!-- /.card -->
 
