@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index']);
 // Route::view('product', 'product');
 Route::get('product',[ProductController::class,'index']);
+Route::view('admin', 'admin');
 Route::view('about', 'about');
 Route::view('/product/add', 'post.add_product');
 Route::view('/product/edit', 'post.edit_product');
