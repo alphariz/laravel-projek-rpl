@@ -25,7 +25,6 @@ class Navbar extends Component
     {
         $navigation = [
             "Home" => "/",
-            "Product" => "/product",
             "About" => "/about",
         ];
         return view('components.navbar',compact('navigation'));

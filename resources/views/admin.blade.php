@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0">
+                    <div class="p-0 card-body table-responsive">
                         <table class="table table-hover text-nowrap">
                             <thead>
                                 <tr>
@@ -99,16 +99,30 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($product as $productData)
                                 <tr>
-                                    <td class="col-1">183</td>
-                                    <td class="col-9">John Doe</td>
+                                    <td class="col-1">{{ $productData->id }}</td>
+                                    <td class="col-9">{{ $productData->name }}</td>
                                     <td>
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                                            <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                            {{-- This one for go to edit page --}}
+                                            <form action="{{ route('product.show',['product'=>$productData->id]) }}" method="get">
+                                                @csrf
+                                                <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                                            </form>
+                                            {{-- End of edit data --}}
+
+                                            {{-- This one for delete data --}}
+                                            <form id="delete-product-{{ $productData->id }}" action="{{ route('product.destroy',['product'=>$productData->id]) }}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                            </form>
+                                            {{-- End of delete data --}}
                                         </div>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
