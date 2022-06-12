@@ -457,11 +457,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.float-right {
+  float: right;
+}
 .m-4 {
   margin: 1rem;
 }
 .m-3 {
   margin: 0.75rem;
+}
+.m-8 {
+  margin: 2rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -479,17 +485,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mr-2 {
   margin-right: 0.5rem;
 }
 .mt-1 {
   margin-top: 0.25rem;
 }
-.mt-2 {
-  margin-top: 0.5rem;
-}
 .mt-6 {
   margin-top: 1.5rem;
+}
+.mt-4 {
+  margin-top: 1rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -497,14 +509,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-3 {
   margin-top: 0.75rem;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 .ml-4 {
   margin-left: 1rem;
@@ -517,6 +523,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .inline-flex {
   display: inline-flex;
+}
+.table {
+  display: table;
 }
 .grid {
   display: grid;
@@ -664,6 +673,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
 .bg-slate-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
@@ -678,6 +691,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.p-0 {
+  padding: 0px;
 }
 .p-2\.5 {
   padding: 0.625rem;

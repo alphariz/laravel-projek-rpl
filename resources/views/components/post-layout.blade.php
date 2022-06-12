@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{ $title }}</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body>
-
+<body class="min-h-screen bg-slate-600">
+    <main class="flex-grow m-8">
+        {{ $main }}
+    </main>
+    <script src="{{ asset('js/app.js') }}"></script>
+    {{ $script }}
 </body>
 </html>

@@ -1,4 +1,4 @@
-<x-app-layout title="Edit Product">
+<x-post-layout title="Edit Product">
     @slot('main')
     <div class="max-w-3xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <h1 class="text-xl font-medium text-gray-900 dark:text-gray-300">Edit Product</h1>
@@ -56,4 +56,4 @@
 
     </script>
     @endslot
-</x-app-layout>
+</x-post-layout>
